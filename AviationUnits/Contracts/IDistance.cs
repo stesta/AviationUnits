@@ -7,5 +7,6 @@ namespace AviationUnits.Contracts
 {
     public interface IDistance : IUnit
     {
+        
     }
 }

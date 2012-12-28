@@ -6,10 +6,11 @@ using AviationUnits.Contracts;
 
 namespace AviationUnits
 {
-    public class Speed<T> : Unit<ISpeed>, ISpeed
+    public abstract class Speed<T> : Unit<ISpeed>, ISpeed
         where T : ISpeed
     {
         public override Type BaseUnit { get { return typeof(KilometersPerHour); } }
+        public override double BaseUnitValue { get { return this.Value * this.Factor; } }
 
         public static implicit operator double(Speed<T> s)
         {
@@ -23,7 +24,7 @@ namespace AviationUnits
 
         public static KilometersPerHour operator -(Speed<T> s1, ISpeed s2)
         {
-            return new KilometersPerHour((s1.BaseUnitValue - s2.Value));
+            return new KilometersPerHour((s1.BaseUnitValue - s2.BaseUnitValue));
         }
     }
 }

@@ -7,9 +7,10 @@ using AviationUnits.Contracts;
 namespace AviationUnits
 {
     public abstract class Angle<T> : Unit<IAngle>, IAngle
-        where T : class, IAngle
+        where T : IAngle
     {
         public override Type BaseUnit { get { return typeof(Radian); } }
+        public override double BaseUnitValue { get { return this.Value * this.Factor; } }
 
         public static implicit operator double(Angle<T> a)
         {
@@ -23,7 +24,7 @@ namespace AviationUnits
 
         public static Radian operator -(Angle<T> a1, IDistance a2)
         {
-            return new Radian((a1.BaseUnitValue - a2.Value));
+            return new Radian((a1.BaseUnitValue - a2.BaseUnitValue));
         }
     }
 

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AviationUnits.Contracts;
 
-namespace AviationUnits.Speed
+namespace AviationUnits
 {
-    public class MilesPerHour : Speed<MilesPerHour>
+    public sealed class MilesPerHour : Speed<MilesPerHour>
     {
         public MilesPerHour()
             : this(0.0)
@@ -13,9 +14,10 @@ namespace AviationUnits.Speed
 
         }
 
-        public static implicit operator MilesPerHour(double value)
+        public MilesPerHour(ISpeed speed)
+            : this(speed.To<MilesPerHour>().Value)
         {
-            return new MilesPerHour(value);
+
         }
 
         public MilesPerHour(double value)
@@ -24,6 +26,11 @@ namespace AviationUnits.Speed
             this.Label = "Miles Per Hour";
             this.Symbol = "mph";
             this.Value = value;
+        }
+
+        public static implicit operator MilesPerHour(double value)
+        {
+            return new MilesPerHour(value);
         }
     }
 }

@@ -6,9 +6,15 @@ using AviationUnits.Contracts;
 
 namespace AviationUnits
 {
-    public class TemperatureBase : Unit<ITemperature>, ITemperature
+    public abstract class Time<T> : Unit<ITime>, ITime
+        where T : ITime
     {
         public override Type BaseUnit
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public override double BaseUnitValue
         {
             get { throw new NotImplementedException(); }
         }

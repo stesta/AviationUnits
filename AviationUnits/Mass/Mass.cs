@@ -10,6 +10,7 @@ namespace AviationUnits
         where T : IMass
     {
         public override Type BaseUnit { get { return typeof(Kilogram); } }
+        public override double BaseUnitValue { get { return this.Value * this.Factor; } }
 
         public static implicit operator double(Mass<T> d)
         {
@@ -23,7 +24,7 @@ namespace AviationUnits
 
         public static Kilogram operator -(Mass<T> m1, IMass m2)
         {
-            return new Kilogram((m1.BaseUnitValue - m2.Value));
+            return new Kilogram((m1.BaseUnitValue - m2.BaseUnitValue));
         }
     }
 }

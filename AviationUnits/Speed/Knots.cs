@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AviationUnits.Contracts;
 
-namespace AviationUnits.Speed
+namespace AviationUnits
 {
-    public class Knots : Speed<Knots>
+    public sealed class Knots : Speed<Knots>
     {
         public Knots()
             : this(0.0)
@@ -13,9 +14,10 @@ namespace AviationUnits.Speed
 
         }
 
-        public static implicit operator Knots(double value)
+        public Knots(ISpeed speed)
+            : this(speed.To<Knots>().Value)
         {
-            return new Knots(value);
+
         }
 
         public Knots(double value)
@@ -24,6 +26,11 @@ namespace AviationUnits.Speed
             this.Label = "Knots";
             this.Symbol = "knot";
             this.Value = value;
+        }
+
+        public static implicit operator Knots(double value)
+        {
+            return new Knots(value);
         }
     }
 }

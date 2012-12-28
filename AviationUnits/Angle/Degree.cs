@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AviationUnits.Contracts;
 
 namespace AviationUnits
 {
-    public class Degree : Angle<Degree>
+    public sealed class Degree : Angle<Degree>
     {
         public Degree()
             : this(0.0)
@@ -13,9 +14,10 @@ namespace AviationUnits
 
         }
 
-        public static implicit operator Degree(double value)
+        public Degree(IAngle distance)
+            : this(distance.To<Degree>().Value)
         {
-            return new Degree(value);
+            
         }
 
         public Degree(double value)
@@ -24,6 +26,11 @@ namespace AviationUnits
             this.Label = "Degrees";
             this.Symbol = "°";
             this.Value = value;
+        }
+
+        public static implicit operator Degree(double value)
+        {
+            return new Degree(value);
         }
     }
 }

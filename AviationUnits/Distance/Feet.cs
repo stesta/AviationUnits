@@ -6,25 +6,31 @@ using AviationUnits.Contracts;
 
 namespace AviationUnits
 {
-    public class Foot : Distance<Foot>
+    public sealed class Feet : Distance<Feet>
     {
-        public Foot()
+        public Feet()
             : this (0.0)
         {
 
         }
 
-        public static implicit operator Foot(double value)
+        public Feet(IDistance distance)
+            : this(distance.To<Feet>().Value)
         {
-            return new Foot(value);
-        }
 
-        public Foot(double value)
+        }
+        
+        public Feet(double value)
         {
             this.Factor = Factors.MetersPerFoot;
             this.Label = "Feet";
             this.Symbol = "ft";
             this.Value = value;
+        }
+
+        public static implicit operator Feet(double value)
+        {
+            return new Feet(value);
         }
     }
 }

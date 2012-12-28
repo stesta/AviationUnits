@@ -22,7 +22,7 @@ namespace AviationUnits
         /// <summary>
         /// The value of this instance in base units
         /// </summary>
-        public virtual double BaseUnitValue { get { return Factor * Value; } }
+        public abstract double BaseUnitValue { get; }
 
         /// <summary>
         /// Factor relative to meters
