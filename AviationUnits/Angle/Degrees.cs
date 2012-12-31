@@ -6,21 +6,21 @@ using AviationUnits.Contracts;
 
 namespace AviationUnits
 {
-    public sealed class Degree : Angle<Degree>
+    public sealed class Degrees : Angle<Degrees>
     {
-        public Degree()
+        public Degrees()
             : this(0.0)
         {
 
         }
 
-        public Degree(IAngle distance)
-            : this(distance.To<Degree>().Value)
+        public Degrees(IAngle angle)
+            : this(angle.To<Degrees>().Value)
         {
             
         }
 
-        public Degree(double value)
+        public Degrees(double value)
         {
             this.Factor = Factors.RadiansPerDegree;
             this.Label = "Degrees";
@@ -28,9 +28,9 @@ namespace AviationUnits
             this.Value = value;
         }
 
-        public static implicit operator Degree(double value)
+        public static implicit operator Degrees(double value)
         {
-            return new Degree(value);
+            return new Degrees(value);
         }
     }
 }

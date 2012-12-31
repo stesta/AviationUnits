@@ -6,21 +6,21 @@ using AviationUnits.Contracts;
 
 namespace AviationUnits
 {
-    public sealed class Radian : Angle<Radian>
+    public sealed class Radians : Angle<Radians>
     {
-        public Radian()
+        public Radians()
             : this(0.0)
         {
 
         }
 
-        public Radian(IAngle angle)
-            : this(angle.To<Radian>().Value)
+        public Radians(IAngle angle)
+            : this(angle.To<Radians>().Value)
         {
 
         }
 
-        public Radian(double value)
+        public Radians(double value)
         {
             this.Factor = Factors.Radian;
             this.Label = "Radians";
@@ -28,9 +28,9 @@ namespace AviationUnits
             this.Value = value;
         }
 
-        public static implicit operator Radian(double value)
+        public static implicit operator Radians(double value)
         {
-            return new Radian(value);
+            return new Radians(value);
         }
     }
 }

@@ -26,5 +26,18 @@ namespace AviationUnits
         {
             return new KilometersPerHour((s1.BaseUnitValue - s2.BaseUnitValue));
         }
+
+        public static KilometersPerHour operator *(Speed<T> s1, ISpeed s2)
+        {
+            return new KilometersPerHour((s1.BaseUnitValue * s2.BaseUnitValue));
+        }
+
+        public static KilometersPerHour operator /(Speed<T> s1, ISpeed s2)
+        {
+            if (s2.BaseUnitValue == 0)
+                throw new DivideByZeroException();
+
+            return new KilometersPerHour((s1.BaseUnitValue / s2.BaseUnitValue));
+        }
     }
 }

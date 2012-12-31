@@ -47,10 +47,12 @@
   <ItemGroup>
     <Compile Include="Angle_Units_Should.cs" />
     <Compile Include="Mass_Units_Should.cs" />
+    <Compile Include="Pressure_Units_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Distance_Units_Should.cs" />
     <Compile Include="Speed_Units_Should.cs" />
     <Compile Include="Temperature_Units_Should.cs" />
+    <Compile Include="Volume_Units_Should.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AviationUnits\AviationUnits.csproj">

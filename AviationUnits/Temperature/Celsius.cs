@@ -23,7 +23,7 @@ namespace AviationUnits
         public Celsius(double value)
         {
             this.Label = "Degrees Celcius";
-            this.Label = "°C";
+            this.Symbol = "°C";
             this.Value = value;
         }
 

@@ -35,14 +35,14 @@ namespace AviationUnits
         //
         // Pressure
 
-        //public static double InchOfMercury { get { return 1; } }
-        //public static double Millibar { get { return 1; } }
+        public static double InchesOfMercury { get { return 1; } }
+        public static double InchesOfMercuryPerMillibar { get { return 0.029533; } }
 
         //
         // Speed
 
         public static double KilometersPerHour { get { return 1; } }
-        public static double KilometersPerHourPerMilePerHour { get { return 1.60934; } }
+        public static double KilometersPerHourPerMilePerHour { get { return 1.609344; } }
         public static double KilometersPerHourPerKnot { get { return 1.852; } }
 
         //
@@ -53,17 +53,10 @@ namespace AviationUnits
         public static double Fahrenheit { get { return 1.8; } }
 
         //
-        // Time
-
-        // Decimal Hours
-        // Hours, Minutes, Seconds
-        
-
-        //
         // Volume
 
         public static double Liter { get { return 1; } }
-        public static double LitersPerUSGallon { get { return 1; } }
-        public static double LitersPerImperialGallon { get { return 1; } }
+        public static double LitersPerUSGallon { get { return 3.785411784; } }
+        public static double LitersPerImperialGallon { get { return 4.54609; } }
     }
 }

@@ -12,14 +12,11 @@ namespace AviationUnits.Tests
         [TestMethod]
         public void Convert_Kilograms_and_Pounds()
         {
-            Kilogram kilograms = 1;
-            Pound pounds = 2.20462;
+            double kgs_lbs = new Kilograms(12).To<Pounds>();   // 26.4555
+            double lbs_kgs = new Pounds(25).To<Kilograms>();   // 11.3398
 
-            var conversion1 = Math.Round(kilograms.To<Pound>(), 5);
-            var conversion2 = Math.Round(pounds.To<Kilogram>(), 5);
-
-            Assert.AreEqual(pounds.Value, conversion1);
-            Assert.AreEqual(kilograms.Value, conversion2);
+            Assert.AreEqual(26.4555, Math.Round(kgs_lbs, 4));
+            Assert.AreEqual(11.3398, Math.Round(lbs_kgs, 4));
         }
     }
 }

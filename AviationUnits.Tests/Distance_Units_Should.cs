@@ -12,28 +12,31 @@ namespace AviationUnits.Tests
         [TestMethod]
         public void Convert_Meters_and_Feet()
         {
-            // These two values are equivalent
-            Meters meters = 5;
-            Feet feet = 16.4041995;
-            
-            double conversion1 = Math.Round(meters.To<Feet>(), 7);   // meters to feet
-            double conversion2 = Math.Round(feet.To<Meters>(), 7);    // feet to meters
+            double m_ft = new Meters(100).To<Feet>();    // 328.083
+            double ft_m = new Feet(30).To<Meters>();     // 9.144
 
-            Assert.IsTrue(conversion1 == feet);
-            Assert.IsTrue(conversion2 == meters);
+            Assert.AreEqual(328.084, Math.Round(m_ft, 3));
+            Assert.AreEqual(9.144, Math.Round(ft_m, 3));
         }
 
         [TestMethod]
-        public void Convert_Feet_and_StatuteMiles()
+        public void Convert_Kilometers_and_NauticalMiles()
         {
-            StatuteMiles miles = 1;
-            Feet feet = 5280;
+            double M_km = new NauticalMiles(100).To<Kilometers>();  // 185.2
+            double km_M = new Kilometers(50).To<NauticalMiles>();   // 26.9978
 
-            var conversion1 = miles.To<Feet>().Value;
-            var conversion2 = feet.To<StatuteMiles>().Value;
+            Assert.AreEqual(185.2, Math.Round(M_km, 4));
+            Assert.AreEqual(26.9978, Math.Round(km_M, 4));
+        }
 
-            Assert.IsTrue(conversion1 == feet);
-            Assert.IsTrue(conversion2 == miles);
+        [TestMethod]
+        public void Convert_NauticalMiles_and_StatuteMiles()
+        {
+            double M_mi = new NauticalMiles(87).To<StatuteMiles>();     // 100.118
+            double mi_M = new StatuteMiles(115).To<NauticalMiles>();    // 99.9324
+
+            Assert.AreEqual(100.118, Math.Round(M_mi, 3));
+            Assert.AreEqual(99.9323, Math.Round(mi_M, 4));
         }
 
         [TestMethod]

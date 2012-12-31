@@ -7,5 +7,8 @@ namespace AviationUnits.Contracts
 {
     public interface ITime : IUnit
     {
+        int Hours { get; set; }
+        int Minutes { get; set; }
+        int Seconds { get; set; }
     }
 }

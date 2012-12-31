@@ -6,21 +6,21 @@ using AviationUnits.Contracts;
 
 namespace AviationUnits
 {
-    public sealed class Kilogram : Mass<Kilogram>
+    public sealed class Kilograms : Mass<Kilograms>
     {
-        public Kilogram()
+        public Kilograms()
             : this(0.0)
         {
 
         }
 
-        public Kilogram(IMass mass)
-            : this(mass.To<Kilogram>().Value)
+        public Kilograms(IMass mass)
+            : this(mass.To<Kilograms>().Value)
         {
 
         }
 
-        public Kilogram(double value)
+        public Kilograms(double value)
         {
             this.Factor = Factors.Kilogram;
             this.Label = "Kilograms";
@@ -28,9 +28,9 @@ namespace AviationUnits
             this.Value = value;
         }
 
-        public static implicit operator Kilogram(double value)
+        public static implicit operator Kilograms(double value)
         {
-            return new Kilogram(value);
+            return new Kilograms(value);
         }
     }
 }

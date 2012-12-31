@@ -34,8 +34,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Angle\Angle.cs" />
-    <Compile Include="Angle\Degree.cs" />
-    <Compile Include="Angle\Radian.cs" />
+    <Compile Include="Angle\Degrees.cs" />
+    <Compile Include="Angle\Radians.cs" />
     <Compile Include="Contracts\IPressure.cs" />
     <Compile Include="Contracts\IUnit.cs" />
     <Compile Include="Contracts\IAngle.cs" />
@@ -54,9 +54,11 @@
     <Compile Include="Distance\Kilometers.cs" />
     <Compile Include="Distance\Meters.cs" />
     <Compile Include="Distance\NauticalMiles.cs" />
-    <Compile Include="Mass\Kilogram.cs" />
+    <Compile Include="Mass\Kilograms.cs" />
     <Compile Include="Mass\Mass.cs" />
-    <Compile Include="Mass\Pound.cs" />
+    <Compile Include="Mass\Pounds.cs" />
+    <Compile Include="Pressure\InchesOfMercury.cs" />
+    <Compile Include="Pressure\Millibars.cs" />
     <Compile Include="Pressure\Pressure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Distance\StatuteMiles.cs" />
@@ -68,10 +70,12 @@
     <Compile Include="Temperature\Fahrenheit.cs" />
     <Compile Include="Temperature\Kelvin.cs" />
     <Compile Include="Temperature\Temperature.cs" />
-    <Compile Include="Time\Time.cs" />
     <Compile Include="Unit.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Volume\ImperialGallons.cs" />
+    <Compile Include="Volume\Liters.cs" />
+    <Compile Include="Volume\USGallons.cs" />
     <Compile Include="Volume\Volume.cs" />
     <Compile Include="Vector.cs" />
   </ItemGroup>

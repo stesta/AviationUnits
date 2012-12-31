@@ -30,6 +30,17 @@ namespace AviationUnits
             return new Meters((d1.BaseUnitValue - d2.BaseUnitValue));
         }
 
-        
+        public static Meters operator *(Distance<T> d1, IDistance d2)
+        {
+            return new Meters((d1.BaseUnitValue * d2.BaseUnitValue));
+        }
+
+        public static Meters operator /(Distance<T> d1, IDistance d2)
+        {
+            if (d2.BaseUnitValue == 0)
+                throw new DivideByZeroException();
+
+            return new Meters((d1.BaseUnitValue / d2.BaseUnitValue));
+        }
     }
 }

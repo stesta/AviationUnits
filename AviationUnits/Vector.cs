@@ -7,15 +7,15 @@ namespace AviationUnits
     public struct Vector
     {
         private readonly ISpeed speed;
-        private readonly Degree direction;
+        private readonly Degrees direction;
 
-        public Vector(ISpeed speed, Degree direction)
+        public Vector(ISpeed speed, Degrees direction)
         {
             this.speed = speed;
             this.direction = direction;
         }
 
         public ISpeed Speed { get { return speed; } }
-        public Degree Direction { get { return direction; } }
+        public Degrees Direction { get { return direction; } }
     }
 }

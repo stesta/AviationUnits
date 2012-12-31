@@ -23,7 +23,7 @@ namespace AviationUnits
         public Kelvin(double value)
         {
             this.Label = "Degrees Kelvin";
-            this.Label = "°K";
+            this.Symbol = "°K";
             this.Value = value;
         }
 

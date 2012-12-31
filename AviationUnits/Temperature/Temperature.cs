@@ -29,5 +29,18 @@ namespace AviationUnits
         {
             return new Kelvin((t1.BaseUnitValue - t2.BaseUnitValue));
         }
+
+        public static Kelvin operator *(Temperature<T> t1, ITemperature t2)
+        {
+            return new Kelvin((t1.BaseUnitValue * t2.BaseUnitValue));
+        }
+
+        public static Kelvin operator /(Temperature<T> t1, ITemperature t2)
+        {
+            if (t2.BaseUnitValue == 0)
+                throw new DivideByZeroException();
+
+            return new Kelvin((t1.BaseUnitValue / t2.BaseUnitValue));
+        }
     }
 }

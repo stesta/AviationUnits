@@ -17,10 +17,7 @@ namespace AviationUnits
                 obj.Value = current.BaseUnitValue * obj.Factor; // converting to base unit
             else
                 obj.Value = current.BaseUnitValue / obj.Factor; // converting out of base unit
-
-            // Automatically round to 9 precision points
-            obj.Value = Math.Round(obj.Value, 9);
-
+            
             return obj;
         }
 
@@ -49,16 +46,6 @@ namespace AviationUnits
             obj.Value = Math.Round(obj.Value, 2);
 
             return obj;                
-        }
-
-        public static T TimeConvert<T>(this ITime current)
-            where T : ITime, new()
-        {
-            T obj = new T();
-
-            // TODO: implement time conversions
-
-            return obj;
         }
     }
 
@@ -98,12 +85,6 @@ namespace AviationUnits
             where T : ITemperature, new()
         {
             return current.TemperatureConvert<T>();
-        }
-
-        public static T To<T>(this ITime current)
-            where T : ITime, new()
-        {
-            return current.TimeConvert<T>();
         }
 
         public static T To<T>(this IVolume current)

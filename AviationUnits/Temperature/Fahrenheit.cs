@@ -23,7 +23,7 @@ namespace AviationUnits
         public Fahrenheit(double value)
         {
             this.Label = "Degrees Fahrenheit";
-            this.Label = "°F";
+            this.Symbol = "°F";
             this.Value = value;
         }
 
