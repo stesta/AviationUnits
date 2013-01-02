@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using AviationUnits.Contracts;
 
-namespace AviationUnits.Speed
+namespace AviationUnits
 {
     public class Mach : Speed<Mach>
     {
