@@ -44,6 +44,7 @@ namespace AviationUnits
         public static double KilometersPerHour { get { return 1; } }
         public static double KilometersPerHourPerMilePerHour { get { return 1.609344; } }
         public static double KilometersPerHourPerKnot { get { return 1.852; } }
+        public static double KilometersPerHourPerMach { get { return 1225.08; } }
 
         //
         // Temperature

@@ -64,6 +64,7 @@
     <Compile Include="Distance\StatuteMiles.cs" />
     <Compile Include="Speed\KilometersPerHour.cs" />
     <Compile Include="Speed\Knots.cs" />
+    <Compile Include="Speed\Mach.cs" />
     <Compile Include="Speed\MilesPerHour.cs" />
     <Compile Include="Speed\Speed.cs" />
     <Compile Include="Temperature\Celsius.cs" />
