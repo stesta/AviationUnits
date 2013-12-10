@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Testa Software</authors>
+    <owners>Testa Software</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://testasoftware.com/products/aviationunits</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A unit library to aid in aviation calculations and conversions.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>Aviation</tags>
+  </metadata>
+</package>

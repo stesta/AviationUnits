@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AviationUnits")]
-[assembly: AssemblyDescription("An aviation unit library for units and conversions.")]
+[assembly: AssemblyDescription("A unit library to aid in aviation calculations and conversions.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Testa Software")]
 [assembly: AssemblyProduct("AviationUnits")]
