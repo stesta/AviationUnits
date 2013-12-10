@@ -55,7 +55,7 @@
     <Compile Include="Volume_Units_Should.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AviationUnits\AviationUnits.csproj">
+    <ProjectReference Include="..\..\src\AviationUnits\AviationUnits.csproj">
       <Project>{4C850261-378D-43F5-870F-CE5989C4D0AD}</Project>
       <Name>AviationUnits</Name>
     </ProjectReference>
