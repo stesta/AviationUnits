@@ -12,6 +12,6 @@
     <description>A unit library to aid in aviation calculations and conversions.</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright 2013</copyright>
-    <tags>Aviation</tags>
+    <tags>AviationUnits aviation units</tags>
   </metadata>
 </package>
